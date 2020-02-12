@@ -1,0 +1,856 @@
+[  +18 ms] executing: [C:\flutter\] git -c log.showSignature=false log -n 1 --pretty=format:%H
+[  +46 ms] Exit code 0 from: git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] 9f5ff2306bb3e30b2b98eee79cd231b1336f41f4
+[        ] executing: [C:\flutter\] git describe --match v*.*.* --first-parent --long --tags
+[  +37 ms] Exit code 0 from: git describe --match v*.*.* --first-parent --long --tags
+[        ] v1.12.13+hotfix.7-0-g9f5ff2306
+[   +5 ms] executing: [C:\flutter\] git rev-parse --abbrev-ref --symbolic @{u}
+[  +27 ms] Exit code 0 from: git rev-parse --abbrev-ref --symbolic @{u}
+[        ] origin/stable
+[        ] executing: [C:\flutter\] git ls-remote --get-url origin
+[  +25 ms] Exit code 0 from: git ls-remote --get-url origin
+[        ] https://github.com/flutter/flutter.git
+[  +58 ms] executing: [C:\flutter\] git rev-parse --abbrev-ref HEAD
+[  +25 ms] Exit code 0 from: git rev-parse --abbrev-ref HEAD
+[        ] stable
+[  +76 ms] executing: C:\Users\ken_t\Android_SDK\platform-tools\adb.exe devices -l
+[  +17 ms] Exit code 0 from: C:\Users\ken_t\Android_SDK\platform-tools\adb.exe devices -l
+[        ] List of devices attached
+           emulator-5554          device product:sdk_gphone_x86_arm model:AOSP_on_IA_Emulator device:generic_x86_arm transport_id:1
+[  +11 ms] C:\Users\ken_t\Android_SDK\platform-tools\adb.exe -s emulator-5554 shell getprop
+[  +39 ms] Artifact Instance of 'AndroidMavenArtifacts' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[   +2 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +107 ms] Generating C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java
+[  +18 ms] ro.hardware = ranchu
+[  +15 ms] Using hardware rendering with device AOSP on IA Emulator. If you get graphics artifacts, consider enabling software rendering with "--enable-software-rendering".
+[  +12 ms] Launching lib\main.dart on AOSP on IA Emulator in debug mode...
+[   +7 ms] executing: C:\Users\ken_t\Android_SDK\platform-tools\adb.exe -s emulator-5554 shell -x logcat -v time -s flutter
+[   +4 ms] executing: C:\Users\ken_t\Android_SDK\platform-tools\adb.exe version
+[  +28 ms] Android Debug Bridge version 1.0.41
+           Version 29.0.5-5949299
+           Installed as C:\Users\ken_t\Android_SDK\platform-tools\adb.exe
+[   +1 ms] executing: C:\Users\ken_t\Android_SDK\platform-tools\adb.exe start-server
+[  +21 ms] Building APK
+[  +12 ms] Running Gradle task 'assembleDebug'...
+[   +1 ms] gradle.properties already sets `android.enableR8`
+[   +2 ms] Using gradle from C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\android\gradlew.bat.
+[   +5 ms] executing: C:\Program Files\Android\Android Studio\jre\bin\java -version
+[  +67 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jre\bin\java -version
+[        ] openjdk version "1.8.0_202-release"
+           OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+           OpenJDK 64-Bit Server VM (build 25.202-b03, mixed mode)
+[   +2 ms] executing: [C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\android\] C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\android\gradlew.bat -Pverbose=true -Ptarget=C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\lib\main.dart -Ptrack-widget-creation=true -Pfilesystem-scheme=org-dartlang-root -Ptarget-platform=android-x86 assembleDebug
+[  +96 ms] I/flutter (15780): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (15780): The following assertion was thrown building StaggeredAnimationExample1Screen(dirty, dependencies:
+[        ] I/flutter (15780): [TickerMode], state: _StaggeredAnimationExample1ScreenState#d946a(ticker active)):
+[        ] I/flutter (15780): type '_AnimatedEvaluation<num>' is not a subtype of type 'Animation<double>'
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): The relevant error-causing widget was:
+[        ] I/flutter (15780):   StaggeredAnimationExample1Screen
+[        ] I/flutter (15780):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/main.dart:30:13
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): When the exception was thrown, this was the stack:
+[        ] I/flutter (15780): #0      new StaggeredExample1Animator (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:18:31)
+[        ] I/flutter (15780): #1      _StaggeredAnimationExample1ScreenState._buildBodyArea (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_animation_example1_screen.dart:44:12)
+[        ] I/flutter (15780): #2      _StaggeredAnimationExample1ScreenState.build (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_animation_example1_screen.dart:39:13)
+[        ] I/flutter (15780): #3      StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (15780): #4      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (15780): #5      Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #6      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #7      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #8      ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #9      Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #10     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #11     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #12     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #13     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #14     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #15     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #16     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #17     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #18     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #19     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #20     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #21     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #22     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #23     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #24     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #25     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #26     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #27     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #28     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #29     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #30     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #31     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #32     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #33     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #34     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #35     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #36     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #37     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #38     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #39     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #40     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #41     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #42     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #43     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #44     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #45     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #46     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #47     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #48     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #49     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #50     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #51     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #52     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #53     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #54     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #55     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #56     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #57     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #58     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #59     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #60     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #61     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #62     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #63     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #64     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #65     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #66     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #67     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #68     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #69     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #70     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #71     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #72     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #73     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #74     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #75     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #76     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #77     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #78     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #79     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #80     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #81     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #82     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #83     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #84     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #85     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #86     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #87     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #88     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #89     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #90     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #91     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #92     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #93     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #94     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #95     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #96     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #97     ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #98     Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #99     Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #100    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #101    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #102    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #103    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #104    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #105    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #106    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #107    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #108    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #109    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #110    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #111    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #112    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5763:32)
+[        ] I/flutter (15780): #113    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #114    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #115    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #116    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #117    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #118    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #119    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #120    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #121    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #122    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #123    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #124    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #125    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #126    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #127    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #128    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #129    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #130    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #131    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #132    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #133    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #134    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #135    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #136    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #137    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #138    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #139    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #140    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #141    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #142    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #143    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #144    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #145    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #146    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #147    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #148    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #149    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #150    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #151    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #152    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #153    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #154    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #155    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #156    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #157    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #158    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #159    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #160    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #161    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #162    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #163    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #164    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #165    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #166    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #167    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #168    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #169    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #170    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #171    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #172    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #173    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #174    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #175    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #176    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #177    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #178    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #179    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #180    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #181    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #182    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #183    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #184    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #185    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #186    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #187    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #188    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #189    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #190    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #191    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #192    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #193    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #194    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #195    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #196    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #197    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #198    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #199    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #200    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #201    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #202    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #203    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #204    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #205    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #206    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #207    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #208    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #209    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #210    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #211    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #212    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #213    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #214    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #215    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #216    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #217    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #218    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #219    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #220    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #221    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #222    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #223    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #224    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #225    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #226    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #227    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #228    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #229    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #230    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #231    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #232    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #233    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #234    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #235    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #236    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #237    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #238    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #239    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #240    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #241    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #242    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #243    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #244    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #245    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #246    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #247    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #248    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #249    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #250    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #251    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #252    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #253    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #254    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #255    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #256    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #257    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #258    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #259    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #260    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #261    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #262    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #263    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #264    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #265    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #266    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #267    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #268    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #269    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #270    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #271    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #272    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #273    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #274    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #275    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #276    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #277    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #278    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #279    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #280    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #281    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #282    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #283    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #284    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #285    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #286    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:5654:14)
+[        ] I/flutter (15780): #287    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #288    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #289    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #290    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #291    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #292    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #293    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #294    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #295    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #296    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #297    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #298    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #299    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #300    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #301    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #302    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #303    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #304    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #305    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #306    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #307    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #308    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #309    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #310    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #311    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #312    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #313    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #314    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #315    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #316    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #317    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #318    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #319    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #320    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #321    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #322    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #323    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #324    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #325    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:4555:11)
+[        ] I/flutter (15780): #326    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #327    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #328    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #329    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4411:16)
+[        ] I/flutter (15780): #330    Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #331    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:4374:5)
+[        ] I/flutter (15780): #332    ComponentElement.mount (package:flutter/src/widgets/framework.dart:4369:5)
+[        ] I/flutter (15780): #333    Element.inflateWidget (package:flutter/src/widgets/framework.dart:3358:14)
+[        ] I/flutter (15780): #334    Element.updateChild (package:flutter/src/widgets/framework.dart:3152:12)
+[        ] I/flutter (15780): #335    RenderObjectToWidgetElement._rebuild (package:flutter/src/widgets/binding.dart:1054:16)
+[        ] I/flutter (15780): #336    RenderObjectToWidgetElement.mount (package:flutter/src/widgets/binding.dart:1025:5)
+[        ] I/flutter (15780): #337    RenderObjectToWidgetAdapter.attachToRenderTree.<anonymous closure> (package:flutter/src/widgets/binding.dart:968:17)
+[        ] I/flutter (15780): #338    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2531:19)
+[        ] I/flutter (15780): #339    RenderObjectToWidgetAdapter.attachToRenderTree (package:flutter/src/widgets/binding.dart:967:13)
+[        ] I/flutter (15780): #340    WidgetsBinding.attachRootWidget (package:flutter/src/widgets/binding.dart:848:7)
+[        ] I/flutter (15780): #341    WidgetsBinding.scheduleAttachRootWidget.<anonymous closure> (package:flutter/src/widgets/binding.dart:830:7)
+[        ] I/flutter (15780): #350    _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[        ] I/flutter (15780): #351    _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[        ] I/flutter (15780): #352    _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:168:12)
+[        ] I/flutter (15780): (elided 8 frames from package dart:async and package dart:async-patch)
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (15780): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (15780): The following assertion was thrown building AnimatedBuilder(animation: AnimationController#38ee5(▶
+[        ] I/flutter (15780): 0.006), dirty, dependencies: [MediaQuery], state: _AnimatedState#fc858):
+[        ] I/flutter (15780): 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is
+[        ] I/flutter (15780): not true.
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): Either the assertion indicates an error in the framework itself, or we should provide substantially
+[        ] I/flutter (15780): more information in this error message to help you determine and fix the underlying cause.
+[        ] I/flutter (15780): In either case, please report this assertion by filing a bug on GitHub:
+[        ] I/flutter (15780):   https://github.com/flutter/flutter/issues/new?template=BUG.md
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): The relevant error-causing widget was:
+[        ] I/flutter (15780):   AnimatedBuilder
+[        ] I/flutter (15780):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/animation/staggered/example1/staggered_example1_animator.dart:28:12
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): When the exception was thrown, this was the stack:
+[        ] I/flutter (15780): #2      Interval.transformInternal (package:flutter/src/animation/curves.dart:180:12)
+[        ] I/flutter (15780): #3      ParametricCurve.transform (package:flutter/src/animation/curves.dart:37:12)
+[        ] I/flutter (15780): #4      Curve.transform (package:flutter/src/animation/curves.dart:91:18)
+[        ] I/flutter (15780): #5      CurvedAnimation.value (package:flutter/src/animation/animations.dart:455:24)
+[        ] I/flutter (15780): #6      Animatable.evaluate (package:flutter/src/animation/tween.dart:53:66)
+[        ] I/flutter (15780): #7      _AnimatedEvaluation.value (package:flutter/src/animation/tween.dart:87:31)
+[        ] I/flutter (15780): #8      StaggeredExample1Animator._buildLayout (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:41:46)
+[        ] I/flutter (15780): #9      AnimatedBuilder.build (package:flutter/src/widgets/transitions.dart:1131:12)
+[        ] I/flutter (15780): #10     _AnimatedState.build (package:flutter/src/widgets/transitions.dart:178:48)
+[        ] I/flutter (15780): #11     StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (15780): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (15780): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (15780): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2551:33)
+[        ] I/flutter (15780): #15     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:796:20)
+[        ] I/flutter (15780): #16     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:283:5)
+[        ] I/flutter (15780): #17     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1109:15)
+[        ] I/flutter (15780): #18     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1048:9)
+[        ] I/flutter (15780): #19     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:964:5)
+[        ] I/flutter (15780): #23     _invoke (dart:ui/hooks.dart:260:10)
+[        ] I/flutter (15780): #24     _drawFrame (dart:ui/hooks.dart:218:3)
+[        ] I/flutter (15780): (elided 5 frames from class _AssertionError and package dart:async)
+[        ] I/flutter (15780): 
+[        ] I/flutter (15780): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (15780): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (16018): The following assertion was thrown building AnimatedBuilder(animation: AnimationController#32534(▶
+[        ] I/flutter (16018): 0.382), dirty, dependencies: [MediaQuery], state: _AnimatedState#d392c):
+[        ] I/flutter (16018): 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is
+[        ] I/flutter (16018): not true.
+[        ] I/flutter (16018): 
+[        ] I/flutter (16018): Either the assertion indicates an error in the framework itself, or we should provide substantially
+[        ] I/flutter (16018): more information in this error message to help you determine and fix the underlying cause.
+[        ] I/flutter (16018): In either case, please report this assertion by filing a bug on GitHub:
+[        ] I/flutter (16018):   https://github.com/flutter/flutter/issues/new?template=BUG.md
+[        ] I/flutter (16018): 
+[        ] I/flutter (16018): The relevant error-causing widget was:
+[        ] I/flutter (16018):   AnimatedBuilder
+[        ] I/flutter (16018):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/animation/staggered/example1/staggered_example1_animator.dart:28:12
+[        ] I/flutter (16018): 
+[        ] I/flutter (16018): When the exception was thrown, this was the stack:
+[        ] I/flutter (16018): #2      Interval.transformInternal (package:flutter/src/animation/curves.dart:180:12)
+[        ] I/flutter (16018): #3      ParametricCurve.transform (package:flutter/src/animation/curves.dart:37:12)
+[        ] I/flutter (16018): #4      Curve.transform (package:flutter/src/animation/curves.dart:91:18)
+[        ] I/flutter (16018): #5      CurvedAnimation.value (package:flutter/src/animation/animations.dart:455:24)
+[        ] I/flutter (16018): #6      Animatable.evaluate (package:flutter/src/animation/tween.dart:53:66)
+[        ] I/flutter (16018): #7      _AnimatedEvaluation.value (package:flutter/src/animation/tween.dart:87:31)
+[        ] I/flutter (16018): #8      StaggeredExample1Animator._buildLayout (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:41:46)
+[        ] I/flutter (16018): #9      AnimatedBuilder.build (package:flutter/src/widgets/transitions.dart:1131:12)
+[        ] I/flutter (16018): #10     _AnimatedState.build (package:flutter/src/widgets/transitions.dart:178:48)
+[        ] I/flutter (16018): #11     StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (16018): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (16018): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (16018): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2551:33)
+[        ] I/flutter (16018): #15     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:796:20)
+[        ] I/flutter (16018): #16     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:283:5)
+[        ] I/flutter (16018): #17     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1109:15)
+[        ] I/flutter (16018): #18     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1048:9)
+[        ] I/flutter (16018): #19     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:964:5)
+[        ] I/flutter (16018): #23     _invoke (dart:ui/hooks.dart:260:10)
+[        ] I/flutter (16018): #24     _drawFrame (dart:ui/hooks.dart:218:3)
+[        ] I/flutter (16018): (elided 5 frames from class _AssertionError and package dart:async)
+[        ] I/flutter (16018): 
+[        ] I/flutter (16018): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16018): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 180 pos 12: 'begin <= 1.0': is not true.
+[        ] I/flutter (16200): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (16200): The following assertion was thrown building AnimatedBuilder(animation: AnimationController#79219(▶
+[        ] I/flutter (16200): 0.730), dirty, dependencies: [MediaQuery], state: _AnimatedState#ef607):
+[        ] I/flutter (16200): 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not
+[        ] I/flutter (16200): true.
+[        ] I/flutter (16200): 
+[        ] I/flutter (16200): Either the assertion indicates an error in the framework itself, or we should provide substantially
+[        ] I/flutter (16200): more information in this error message to help you determine and fix the underlying cause.
+[        ] I/flutter (16200): In either case, please report this assertion by filing a bug on GitHub:
+[        ] I/flutter (16200):   https://github.com/flutter/flutter/issues/new?template=BUG.md
+[        ] I/flutter (16200): 
+[        ] I/flutter (16200): The relevant error-causing widget was:
+[        ] I/flutter (16200):   AnimatedBuilder
+[        ] I/flutter (16200):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/animation/staggered/example1/staggered_example1_animator.dart:28:12
+[        ] I/flutter (16200): 
+[        ] I/flutter (16200): When the exception was thrown, this was the stack:
+[        ] I/flutter (16200): #2      Interval.transformInternal (package:flutter/src/animation/curves.dart:182:12)
+[        ] I/flutter (16200): #3      ParametricCurve.transform (package:flutter/src/animation/curves.dart:37:12)
+[        ] I/flutter (16200): #4      Curve.transform (package:flutter/src/animation/curves.dart:91:18)
+[        ] I/flutter (16200): #5      CurvedAnimation.value (package:flutter/src/animation/animations.dart:455:24)
+[        ] I/flutter (16200): #6      Animatable.evaluate (package:flutter/src/animation/tween.dart:53:66)
+[        ] I/flutter (16200): #7      _AnimatedEvaluation.value (package:flutter/src/animation/tween.dart:87:31)
+[        ] I/flutter (16200): #8      StaggeredExample1Animator._buildLayout (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:41:45)
+[        ] I/flutter (16200): #9      AnimatedBuilder.build (package:flutter/src/widgets/transitions.dart:1131:12)
+[        ] I/flutter (16200): #10     _AnimatedState.build (package:flutter/src/widgets/transitions.dart:178:48)
+[        ] I/flutter (16200): #11     StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (16200): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (16200): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (16200): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2551:33)
+[        ] I/flutter (16200): #15     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:796:20)
+[        ] I/flutter (16200): #16     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:283:5)
+[        ] I/flutter (16200): #17     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1109:15)
+[        ] I/flutter (16200): #18     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1048:9)
+[        ] I/flutter (16200): #19     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:964:5)
+[        ] I/flutter (16200): #23     _invoke (dart:ui/hooks.dart:260:10)
+[        ] I/flutter (16200): #24     _drawFrame (dart:ui/hooks.dart:218:3)
+[        ] I/flutter (16200): (elided 5 frames from class _AssertionError and package dart:async)
+[        ] I/flutter (16200): 
+[        ] I/flutter (16200): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16200): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (16335): The following assertion was thrown building AnimatedBuilder(animation: AnimationController#15c5c(▶
+[        ] I/flutter (16335): 0.388), dirty, dependencies: [MediaQuery], state: _AnimatedState#cea60):
+[        ] I/flutter (16335): 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not
+[        ] I/flutter (16335): true.
+[        ] I/flutter (16335): 
+[        ] I/flutter (16335): Either the assertion indicates an error in the framework itself, or we should provide substantially
+[        ] I/flutter (16335): more information in this error message to help you determine and fix the underlying cause.
+[        ] I/flutter (16335): In either case, please report this assertion by filing a bug on GitHub:
+[        ] I/flutter (16335):   https://github.com/flutter/flutter/issues/new?template=BUG.md
+[        ] I/flutter (16335): 
+[        ] I/flutter (16335): The relevant error-causing widget was:
+[        ] I/flutter (16335):   AnimatedBuilder
+[        ] I/flutter (16335):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/animation/staggered/example1/staggered_example1_animator.dart:28:12
+[        ] I/flutter (16335): 
+[        ] I/flutter (16335): When the exception was thrown, this was the stack:
+[        ] I/flutter (16335): #2      Interval.transformInternal (package:flutter/src/animation/curves.dart:182:12)
+[        ] I/flutter (16335): #3      ParametricCurve.transform (package:flutter/src/animation/curves.dart:37:12)
+[        ] I/flutter (16335): #4      Curve.transform (package:flutter/src/animation/curves.dart:91:18)
+[        ] I/flutter (16335): #5      CurvedAnimation.value (package:flutter/src/animation/animations.dart:455:24)
+[        ] I/flutter (16335): #6      Animatable.evaluate (package:flutter/src/animation/tween.dart:53:66)
+[        ] I/flutter (16335): #7      _AnimatedEvaluation.value (package:flutter/src/animation/tween.dart:87:31)
+[        ] I/flutter (16335): #8      StaggeredExample1Animator._buildLayout (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:41:45)
+[        ] I/flutter (16335): #9      AnimatedBuilder.build (package:flutter/src/widgets/transitions.dart:1131:12)
+[        ] I/flutter (16335): #10     _AnimatedState.build (package:flutter/src/widgets/transitions.dart:178:48)
+[        ] I/flutter (16335): #11     StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (16335): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (16335): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (16335): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2551:33)
+[        ] I/flutter (16335): #15     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:796:20)
+[        ] I/flutter (16335): #16     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:283:5)
+[        ] I/flutter (16335): #17     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1109:15)
+[        ] I/flutter (16335): #18     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1048:9)
+[        ] I/flutter (16335): #19     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:964:5)
+[        ] I/flutter (16335): #23     _invoke (dart:ui/hooks.dart:260:10)
+[        ] I/flutter (16335): #24     _drawFrame (dart:ui/hooks.dart:218:3)
+[        ] I/flutter (16335): (elided 5 frames from class _AssertionError and package dart:async)
+[        ] I/flutter (16335): 
+[        ] I/flutter (16335): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16335): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[   +4 ms] I/flutter (16512): ══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+[        ] I/flutter (16512): The following assertion was thrown building AnimatedBuilder(animation: AnimationController#93779(▶
+[        ] I/flutter (16512): 0.552), dirty, dependencies: [MediaQuery], state: _AnimatedState#851bb):
+[        ] I/flutter (16512): 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not
+[        ] I/flutter (16512): true.
+[        ] I/flutter (16512): 
+[        ] I/flutter (16512): Either the assertion indicates an error in the framework itself, or we should provide substantially
+[        ] I/flutter (16512): more information in this error message to help you determine and fix the underlying cause.
+[        ] I/flutter (16512): In either case, please report this assertion by filing a bug on GitHub:
+[        ] I/flutter (16512):   https://github.com/flutter/flutter/issues/new?template=BUG.md
+[        ] I/flutter (16512): 
+[        ] I/flutter (16512): The relevant error-causing widget was:
+[        ] I/flutter (16512):   AnimatedBuilder
+[        ] I/flutter (16512):   file:///C:/Users/ken_t/Documents/FlutterProjects/flutter_dec_2019_exploration/lib/animation/staggered/example1/staggered_example1_animator.dart:27:12
+[        ] I/flutter (16512): 
+[        ] I/flutter (16512): When the exception was thrown, this was the stack:
+[        ] I/flutter (16512): #2      Interval.transformInternal (package:flutter/src/animation/curves.dart:182:12)
+[        ] I/flutter (16512): #3      ParametricCurve.transform (package:flutter/src/animation/curves.dart:37:12)
+[        ] I/flutter (16512): #4      Curve.transform (package:flutter/src/animation/curves.dart:91:18)
+[        ] I/flutter (16512): #5      CurvedAnimation.value (package:flutter/src/animation/animations.dart:455:24)
+[        ] I/flutter (16512): #6      Animatable.evaluate (package:flutter/src/animation/tween.dart:53:66)
+[        ] I/flutter (16512): #7      _AnimatedEvaluation.value (package:flutter/src/animation/tween.dart:87:31)
+[        ] I/flutter (16512): #8      StaggeredExample1Animator._buildLayout (package:flutter_dec_2019_exploration/animation/staggered/example1/staggered_example1_animator.dart:40:45)
+[        ] I/flutter (16512): #9      AnimatedBuilder.build (package:flutter/src/widgets/transitions.dart:1131:12)
+[        ] I/flutter (16512): #10     _AnimatedState.build (package:flutter/src/widgets/transitions.dart:178:48)
+[        ] I/flutter (16512): #11     StatefulElement.build (package:flutter/src/widgets/framework.dart:4507:18)
+[        ] I/flutter (16512): #12     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:4391:15)
+[        ] I/flutter (16512): #13     Element.rebuild (package:flutter/src/widgets/framework.dart:4115:5)
+[        ] I/flutter (16512): #14     BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:2551:33)
+[        ] I/flutter (16512): #15     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:796:20)
+[        ] I/flutter (16512): #16     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:283:5)
+[        ] I/flutter (16512): #17     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1109:15)
+[        ] I/flutter (16512): #18     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1048:9)
+[        ] I/flutter (16512): #19     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:964:5)
+[        ] I/flutter (16512): #23     _invoke (dart:ui/hooks.dart:260:10)
+[        ] I/flutter (16512): #24     _drawFrame (dart:ui/hooks.dart:218:3)
+[        ] I/flutter (16512): (elided 5 frames from class _AssertionError and package dart:async)
+[        ] I/flutter (16512): 
+[        ] I/flutter (16512): ════════════════════════════════════════════════════════════════════════════════════════════════════
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[        ] I/flutter (16512): Another exception was thrown: 'package:flutter/src/animation/curves.dart': Failed assertion: line 182 pos 12: 'end <= 1.0': is not true.
+[+2947 ms] > Task :app:compileFlutterBuildDebug
+[        ] [  +16 ms] executing: [C:\flutter\] git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] [  +50 ms] Exit code 0 from: git -c log.showSignature=false log -n 1 --pretty=format:%H
+[        ] [        ] 9f5ff2306bb3e30b2b98eee79cd231b1336f41f4
+[        ] [        ] executing: [C:\flutter\] git describe --match v*.*.* --first-parent --long --tags
+[        ] [  +35 ms] Exit code 0 from: git describe --match v*.*.* --first-parent --long --tags
+[        ] [        ] v1.12.13+hotfix.7-0-g9f5ff2306
+[        ] [   +5 ms] executing: [C:\flutter\] git rev-parse --abbrev-ref --symbolic @{u}
+[        ] [  +27 ms] Exit code 0 from: git rev-parse --abbrev-ref --symbolic @{u}
+[        ] [        ] origin/stable
+[        ] [        ] executing: [C:\flutter\] git ls-remote --get-url origin
+[        ] [  +26 ms] Exit code 0 from: git ls-remote --get-url origin
+[        ] [        ] https://github.com/flutter/flutter.git
+[        ] [  +58 ms] executing: [C:\flutter\] git rev-parse --abbrev-ref HEAD
+[        ] [  +25 ms] Exit code 0 from: git rev-parse --abbrev-ref HEAD
+[        ] [        ] stable
+[        ] [  +14 ms] Artifact Instance of 'AndroidMavenArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] [   +2 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] [  +64 ms] Initializing file store
+[        ] [   +1 ms] Done initializing file store
+[        ] [ +624 ms] kernel_snapshot: Starting due to {InvalidatedReason.inputChanged}
+[        ] [   +8 ms] C:\flutter\bin\cache\dart-sdk\bin\dart.exe C:\flutter\bin\cache\artifacts\engine\windows-x64\frontend_server.dart.snapshot --sdk-root C:\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --target=flutter -Ddart.developer.causal_async_stacks=true -Ddart.vm.profile=false -Ddart.vm.product=false --bytecode-options=source-positions,local-var-info,debugger-stops,instance-field-initializers,keep-unreachable-code,avoid-closure-call-instructions --enable-asserts --track-widget-creation --no-link-platform --packages C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\.packages --output-dill C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\.dart_tool\flutter_build\394c15c1903ceddcae1c5808a77c3c30\app.dill --depfile C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\.dart_tool\flutter_build\394c15c1903ceddcae1c5808a77c3c30\kernel_snapshot.d package:flutter_app_animation/main.dart
+[        ] [  +11 ms] Invalid depfile: C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\.dart_tool\flutter_build\394c15c1903ceddcae1c5808a77c3c30\kernel_snapshot.d
+[        ] [   +1 ms] Invalid depfile: C:\Users\ken_t\Documents\FlutterProjects\flutter_app_animation\.dart_tool\flutter_build\394c15c1903ceddcae1c5808a77c3c30\kernel_snapshot.d
+[        ] [ +360 ms] 
+[        ]            Compiler message:
+[        ] [        ] lib/animation/staggered/example1/staggered_example1_animator.dart:1:8: Error: Not found: 'dart:html'
+[        ] [        ] import 'dart:html';
+[        ] [        ]        ^
+[+1982 ms] [+2278 ms] /C:/flutter/packages/flutter/lib/src/painting/_network_image_web.dart:64:12: Error: Method not found: 'webOnlyInstantiateImageCodecFromUrl'.
+[        ] [        ]     return ui.webOnlyInstantiateImageCodecFromUrl(resolved); // ignore: undefined_function
+[        ] [        ]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[+1299 ms] [+1349 ms] U
+[        ] [        ] nhandled exception:
+[        ]            FileSystemException(uri=org-dartlang-untranslata
+[        ] [        ] ble-uri:dart%3Ahtml; message=StandardFileSystem only supports file:* and data:* URIs)
+[        ]            #0      StandardFileSystem.entityForUri (package:front_end/src/api_prototype/stan
+[        ] [        ] dard_file_system.dart:33:7)
+[        ]            #1      asFileUri (package:vm/kernel_front_end.dart:604:37)
+[        ]            #2      writeDepfile (package:vm/kernel_front_end.dart:799:21)
+[        ]            <asynchronous susp
+[        ] [        ] ension>
+[        ]            #3      FrontendCompiler.compile (package:frontend_server/frontend_server.dart:472:15)
+[        ]            <asynchronous suspension>
+[        ]            #4      _F
+[        ] [        ] lutterFrontendCompiler.compile (package:flutter_frontend_server/server.dart:38:22)
+[        ]            #5      starter (package:
+[        ] [        ] flutter_frontend_server/server.dart:149:27)
+[        ]            #6      main (file:///C:/b/s/w/ir/cache/builder/src/f
+[        ] [        ] lutter/flutter_frontend_server/bin/starter.dart:8:30)
+[        ]            #7      _startIsolate.<
+[        ] [        ] anonymous closure> (dart:isolate-patch/isolate_patch.dart:305:32)
+[        ]            #8      _RawReceivePo
+[        ] [        ] rtImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:174:12)
+[  +99 ms] [  +49 ms] Persisting file store
+[        ] [   +6 ms] Done persisting file store
+[        ] [   +5 ms] "flutter assemble" took 4,807ms.
+[        ] [        ] Target kernel_snapshot failed: Exception: Errors during snapshot creation: null
+[        ] build failed.
+[        ] #0      throwToolExit (package:flutter_tools/src/base/common.dart:28:3)
+[        ] #1      AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:183:7)
+[        ] <asynchronous suspension>
+[        ] #2      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:615:18)
+[        ] <asynchronous suspension>
+[        ] #3      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:515:33)
+[        ] <asynchronous suspension>
+[        ] #4      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+[        ] #5      _rootRun (dart:async/zone.dart:1126:13)
+[        ] #6      _CustomZone.run (dart:async/zone.dart:1023:19)
+[        ] #7      _runZoned (dart:async/zone.dart:1518:10)
+[        ] #8      runZoned (dart:async/zone.dart:1465:12)
+[        ] #9      AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+[        ] #10     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:505:20)
+[        ] #11     CommandRunner.runCommand (package:args/command_runner.dart:197:27)
+[        ] #12     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:413:21)
+[        ] <asynchronous suspension>
+[        ] #13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+[        ] #14     _rootRun (dart:async/zone.dart:1126:13)
+[        ] #15     _CustomZone.run (dart:async/zone.dart:1023:19)
+[        ] #16     _runZoned (dart:async/zone.dart:1518:10)
+[        ] #17     runZoned (dart:async/zone.dart:1465:12)
+[        ] #18     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+[        ] #19     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:19)
+[        ] #20     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:112:25)
+[        ] #21     new Future.sync (dart:async/future.dart:224:31)
+[        ] #22     CommandRunner.run (package:args/command_runner.dart:112:14)
+[        ] #23     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:250:18)
+[        ] #24     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:63:22)
+[        ] #25     _rootRun (dart:async/zone.dart:1126:13)
+[        ] #26     _CustomZone.run (dart:async/zone.dart:1023:19)
+[        ] #27     _runZoned (dart:async/zone.dart:1518:10)
+[        ] #28     runZoned (dart:async/zone.dart:1502:12)
+[        ] #29     run.<anonymous closure> (package:flutter_tools/runner.dart:61:18)
+[        ] <asynchronous suspension>
+[        ] #30     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+[        ] #31     _rootRun (dart:async/zone.dart:1126:13)
+[        ] #32     _CustomZone.run (dart:async/zone.dart:1023:19)
+[        ] #33     _runZoned (dart:async/zone.dart:1518:10)
+[        ] #34     runZoned (dart:async/zone.dart:1465:12)
+[        ] #35     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+[        ] #36     runInContext (package:flutter_tools/src/context_runner.dart:64:24)
+[        ] #37     run (package:flutter_tools/runner.dart:50:10)
+[        ] #38     main (package:flutter_tools/executable.dart:65:9)
+[        ] #39     main (file:///C:/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+[        ] #40     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:305:32)
+[        ] #41     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:174:12)
+[        ] FAILURE: Build failed with an exception.
+[        ] * Where:
+[        ] Script 'C:\flutter\packages\flutter_tools\gradle\flutter.gradle' line: 780
+[        ] * What went wrong:
+[        ] Execution failed for task ':app:compileFlutterBuildDebug'.
+[        ] > Process 'command 'C:\flutter\bin\flutter.bat'' finished with non-zero exit value 1
+[        ] * Try:
+[        ] > Task :app:compileFlutterBuildDebug FAILED
+[        ] 1 actionable task: 1 executed
+[        ] Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+[        ] * Get more help at https://help.gradle.org
+[        ] BUILD FAILED in 6s
+[ +367 ms] Running Gradle task 'assembleDebug'... (completed in 7.0s)
+[   +3 ms] "flutter run" took 7,374ms.
+Gradle task assembleDebug failed with exit code 1
+
+#0      throwToolExit (package:flutter_tools/src/base/common.dart:28:3)
+#1      buildGradleApp (package:flutter_tools/src/android/gradle.dart:387:7)
+<asynchronous suspension>
+#2      _AndroidBuilderImpl.buildApk (package:flutter_tools/src/android/android_builder.dart:97:13)
+#3      AndroidDevice.startApp (package:flutter_tools/src/android/android_device.dart:522:28)
+<asynchronous suspension>
+#4      FlutterDevice.runHot (package:flutter_tools/src/resident_runner.dart:450:54)
+<asynchronous suspension>
+#5      HotRunner.run (package:flutter_tools/src/run_hot.dart:266:39)
+#6      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:504:37)
+<asynchronous suspension>
+#7      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:615:18)
+<asynchronous suspension>
+#8      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:515:33)
+<asynchronous suspension>
+#9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+#10     _rootRun (dart:async/zone.dart:1126:13)
+#11     _CustomZone.run (dart:async/zone.dart:1023:19)
+#12     _runZoned (dart:async/zone.dart:1518:10)
+#13     runZoned (dart:async/zone.dart:1465:12)
+#14     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+#15     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:505:20)
+#16     CommandRunner.runCommand (package:args/command_runner.dart:197:27)
+#17     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:413:21)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+#19     _rootRun (dart:async/zone.dart:1126:13)
+#20     _CustomZone.run (dart:async/zone.dart:1023:19)
+#21     _runZoned (dart:async/zone.dart:1518:10)
+#22     runZoned (dart:async/zone.dart:1465:12)
+#23     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+#24     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:19)
+#25     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:112:25)
+#26     new Future.sync (dart:async/future.dart:224:31)
+#27     CommandRunner.run (package:args/command_runner.dart:112:14)
+#28     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:250:18)
+#29     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:63:22)
+#30     _rootRun (dart:async/zone.dart:1126:13)
+#31     _CustomZone.run (dart:async/zone.dart:1023:19)
+#32     _runZoned (dart:async/zone.dart:1518:10)
+#33     runZoned (dart:async/zone.dart:1502:12)
+#34     run.<anonymous closure> (package:flutter_tools/runner.dart:61:18)
+<asynchronous suspension>
+#35     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:146:29)
+#36     _rootRun (dart:async/zone.dart:1126:13)
+#37     _CustomZone.run (dart:async/zone.dart:1023:19)
+#38     _runZoned (dart:async/zone.dart:1518:10)
+#39     runZoned (dart:async/zone.dart:1465:12)
+#40     AppContext.run (package:flutter_tools/src/base/context.dart:145:18)
+#41     runInContext (package:flutter_tools/src/context_runner.dart:64:24)
+#42     run (package:flutter_tools/runner.dart:50:10)
+#43     main (package:flutter_tools/executable.dart:65:9)
+#44     main (file:///C:/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+#45     _startIsolate.<anonymous closure> (dart:isolate-patch/isolate_patch.dart:305:32)
+#46     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:174:12)
+
+
