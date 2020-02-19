@@ -7,6 +7,7 @@ import 'package:flutter_app_animation/animation/staggered/basic_staggered_animat
 import 'package:flutter_app_animation/animation/staggered/example1/staggered_animation_example1_screen.dart';
 import 'package:flutter_app_animation/animation/staggered/example2/loading_indicator_animation_screen.dart';
 import 'package:flutter_app_animation/clip_concept_page.dart';
+import 'package:flutter_app_animation/clipper/custom_clipper_selection_page.dart';
 import 'package:flutter_app_animation/expanded_concept_page.dart';
 import 'package:flutter_app_animation/fittedbox_concept_page.dart';
 import 'package:flutter_app_animation/flexible_concept_page.dart';
@@ -37,6 +38,8 @@ class MyApp extends StatelessWidget {
         '/aligned': (BuildContext context) => AnimatedAlignScreen(),
         '/animatedContainer': (BuildContext context) =>
             AnimatedContainerScreen(),
+        '/customClipper': (BuildContext context) =>
+            CustomClipperSelectionPage(),
       },
     );
   }
@@ -57,7 +60,11 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[_buildTopCard(context), _buildCenterCard(context)],
+        children: <Widget>[
+          _buildTopCard(context),
+          _buildCenterCard(context),
+          _buildBottomCard(context),
+        ],
       ),
     );
   }
@@ -132,6 +139,37 @@ class HomeScreen extends StatelessWidget {
               color: Colors.blue[300],
               onPressed: () {
                 Navigator.of(context).pushNamed('/animatedContainer');
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBottomCard(BuildContext context) {
+    return Card(
+      elevation: 8,
+      margin: EdgeInsets.all(16),
+      child: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              "Bonus Section - Custom Clipper",
+              style: TextStyle(
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            RaisedButton(
+              elevation: 8,
+              child: Text("Custom Clipper"),
+              color: Colors.blue[300],
+              onPressed: () {
+                Navigator.of(context).pushNamed('/customClipper');
               },
             ),
           ],
